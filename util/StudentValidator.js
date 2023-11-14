@@ -10,13 +10,14 @@ const schema = {
         },
         "dept": {
             "type": "string",
+            "pattern": "^[A-Z][A-Z]*$",
             "maxLength": 3,
             "minLength": 2
         }
     },
-    "required": ["name", "dept"],
-    "maxProperties": 2,
-    "minProperties": 2,
+    "required": ["name", "dept" , "id"],
+    "maxProperties": 3,
+    "minProperties": 3,
 };
 
 module.exports = ajv.compile(schema);

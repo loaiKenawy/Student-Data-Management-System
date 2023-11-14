@@ -1,4 +1,5 @@
 module.exports=(req,res,nxt) =>{
-    console.log("Logging");
+    console.log("--Message from custom middleware");
+    console.log(`--body = ${req.body}`);
     nxt();
 }
